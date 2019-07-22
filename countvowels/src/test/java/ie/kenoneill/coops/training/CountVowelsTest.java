@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class CountVowelsTest {
 
     @Test
-    public void countVowels_novowels_expect0(){
+    public void countVowels_noVowels_expect0(){
         CountVowels objUnderTest = new CountVowels("Rhythm");
         assertEquals(0, objUnderTest.countA());
         assertEquals(0, objUnderTest.countE());
