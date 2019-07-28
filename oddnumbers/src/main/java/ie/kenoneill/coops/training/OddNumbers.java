@@ -7,10 +7,13 @@ public class OddNumbers extends Exception {
     public Set<Integer> oddNumbers(Integer maxNumber) {
         Set<Integer> oddNumbers = null;
 
-        for(int count=0; count=maxNumber;)
-        Integer oddNumber = maxNumber % 2;
+//        for(int count=0; count=maxNumber;)
+//        Integer oddNumber = maxNumber % 2;
 
         return oddNumbers;
     }
 
+    public Set<Integer> oddNumbers_bonus(int i) {
+        return null;
+    }
 }

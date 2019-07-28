@@ -14,6 +14,27 @@ public class Reverse {
         return "";
     }
 
+    public String reverseIgnoreSpaces(String stringToReverse) {
+        StringBuilder result = new StringBuilder();
+        char[] letters = stringToReverse.toCharArray();
+
+        for(char letter:letters) {
+            if(letter != ' ') {
+                result.insert(0, letter);
+            }
+        }
+        return result.toString();
+    }
+
+    public String reverseWords(String reverseWords) {
+        StringBuilder string = new StringBuilder();
+        for (String words : reverseWords.split(" ")) {
+            string.insert(0, words);
+            string.insert(0, " ");
+        }
+        return string.toString().trim();
+    }
+
     private String usingLibraryMethods(String astring) {
         return new StringBuilder(astring).reverse().toString();
     }
