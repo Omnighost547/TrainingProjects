@@ -13,9 +13,13 @@ public class CountVowels {
     Set<String> vowels = Stream.of("a", "e", "i", "o", "u").collect(Collectors.toCollection(HashSet::new));
 
     public CountVowels(String word) {
-        freq = Arrays.stream(word.toLowerCase().split(""))
+        freq = Arrays.stream(
+            word.toLowerCase().split(""))
             .filter(x -> vowels.contains(x))
-            .collect(Collectors.toMap(key -> key, key -> 1, Integer::sum));
+            .collect(Collectors.toMap(
+                key -> key, // keyMapper.
+                key -> 1, // valueMapper.
+                Integer::sum)); // mergeFunction. "Integer::sum" == "(s, a) -> s+a"
 
 /*
         //int count = 0;
